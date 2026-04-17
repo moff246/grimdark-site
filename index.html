@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grimdark</title>
+    <meta name="description" content="A dark, ritual-terminal prelaunch page for Grimdark." />
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:title" content="Grimdark" />
+    <meta property="og:description" content="Ritual terminal. Red glow. Join the waitlist." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://grimdark.host" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=5" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <script src="script.js?v=5" defer></script>
+  </head>
+  <body>
+    <div class="screen-noise"></div>
+    <div class="vignette"></div>
+    <div class="scanline"></div>
+    <div class="red-glow red-glow-left"></div>
+    <div class="red-glow red-glow-right"></div>
+
+    <header class="topbar">
+      <div class="brand-wrap">
+        <span class="brand-mark">◉</span>
+        <span class="brand">grimdark.host</span>
+      </div>
+      <a href="#waitlist-form" class="waitlist-link">signal intent</a>
+    </header>
+
+    <main class="shell">
+      <section class="boot-panel">
+        <div class="boot-header">
+          <span>omnissiah://grimdark</span>
+        </div>
+
+        <div class="boot-body" id="boot-log" aria-live="polite">
+          <div class="boot-line" data-text="omnissiah protocol :: initiating">
+            <span class="prefix">&gt;</span><span class="line-text"></span><span class="boot-spinner" aria-hidden="true"><span></span><span></span><span></span></span>
+          </div>
+          <div class="boot-line" data-text="indexing archive fragments">
+            <span class="prefix">&gt;</span><span class="line-text"></span><span class="boot-spinner" aria-hidden="true"><span></span><span></span><span></span></span>
+          </div>
+          <div class="boot-line" data-text="deploying vox transmission">
+            <span class="prefix">&gt;</span><span class="line-text"></span><span class="boot-spinner" aria-hidden="true"><span></span><span></span><span></span></span>
+          </div>
+          <div class="boot-line" data-text="awaiting operator">
+            <span class="prefix">&gt;</span><span class="line-text"></span><span class="boot-spinner" aria-hidden="true"><span></span><span></span><span></span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero hidden" id="hero">
+        <p class="ritual-tag">// machine-cult interface</p>
+        <div class="hero-copy hero-copy-tight" id="translation-block">
+          <p class="translate-line" data-latin="intra archivum." data-english="enter the archive.">intra archivum.</p>
+          <p class="translate-line" data-latin="interroga." data-english="ask the question.">interroga.</p>
+          <p class="translate-line" data-latin="accipe decretum." data-english="receive the ruling.">accipe decretum.</p>
+        </div>
+
+        <div class="command-block">
+          <div class="command-line"><span class="prompt">host@grimdark:~$</span> <span class="typed-command" id="typed-command"></span><span class="cursor">█</span></div>
+          <div class="command-result" id="command-result">
+            source lock engaged :: archive aligned :: vox channel open
+          </div>
+        </div>
+
+        <div class="actions" id="waitlist">
+          <span class="status">prelaunch // invitation pending</span>
+        </div>
+
+        <form class="waitlist-form" id="waitlist-form">
+          <label class="sr-only" for="email">Email</label>
+          <div class="terminal-input-shell">
+            <span class="input-prefix">relay@grimdark:~$</span>
+            <input id="email" name="email" type="email" placeholder="enter relay address" required />
+            <button type="submit" class="submit-button">transmit</button>
+          </div>
+        </form>
+
+        <p class="form-note" id="form-note">waitlist capture endpoint not yet bound</p>
+      </section>
+    </main>
+  </body>
+</html>
