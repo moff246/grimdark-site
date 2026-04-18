@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#ff5a5a" stop-opacity="0.95"/>
+      <stop offset="38%" stop-color="#ff1e1e" stop-opacity="0.9"/>
+      <stop offset="72%" stop-color="#8a0000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#120000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18" result="blur1"/>
+      <feColorMatrix in="blur1" type="matrix" values="1 0 0 0 0  0 0.16 0 0 0  0 0 0 0 0  0 0 0 1 0" result="redBlur"/>
+      <feMerge>
+        <feMergeNode in="redBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="skullFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="55%" stop-color="#ff2020"/>
+      <stop offset="100%" stop-color="#a30000"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="#050505"/>
+  <circle cx="256" cy="225" r="170" fill="url(#bg)"/>
+
+  <g filter="url(#glow)">
+    <path d="M256 74c-86 0-146 57-146 138 0 43 17 78 44 101 13 11 22 26 24 43l4 27c2 16 16 28 33 28h74c17 0 31-12 33-28l4-27c2-17 11-32 24-43 27-23 44-58 44-101 0-81-60-138-146-138Z" fill="url(#skullFill)"/>
+    <path d="M186 327h140l-18 102c-3 16-17 27-33 27h-38c-16 0-30-11-33-27l-18-102Z" fill="url(#skullFill)"/>
+    <path d="M149 288c-26 8-45 27-56 49 24 2 44 12 59 28l28-39-31-38Zm214 0-31 38 28 39c15-16 35-26 59-28-11-22-30-41-56-49Z" fill="#b10000"/>
+
+    <path d="M176 185l44 74h-90l46-74Z" fill="#110000"/>
+    <path d="M336 185l46 74h-90l44-74Z" fill="#110000"/>
+    <path d="M256 226l34 62h-68l34-62Z" fill="#110000"/>
+
+    <rect x="194" y="334" width="124" height="22" rx="8" fill="#160000"/>
+    <rect x="206" y="356" width="20" height="66" rx="7" fill="#160000"/>
+    <rect x="236" y="356" width="20" height="72" rx="7" fill="#160000"/>
+    <rect x="266" y="356" width="20" height="72" rx="7" fill="#160000"/>
+    <rect x="296" y="356" width="20" height="66" rx="7" fill="#160000"/>
+
+    <path d="M160 134 124 98l18 52Z" fill="#c80000"/>
+    <path d="M352 134 388 98l-18 52Z" fill="#c80000"/>
+    <ellipse cx="256" cy="146" rx="74" ry="27" fill="#ffb3b3" opacity="0.18"/>
+  </g>
+</svg>
